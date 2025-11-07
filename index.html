@@ -122,7 +122,11 @@
         return;
       }
       const nombres = await cargarNombres();
-
+      if(miNombre=='Marlon'){
+        resultadoDiv.textContent = "😅 Tu nombre eres el creador estas fuera de concurso.";
+        resultadoDiv.style.color = "#16a34a";
+        return;
+      }
       if (!nombres.includes(miNombre)) {
         resultadoDiv.textContent = "⚠️ Tu nombre no está en la lista.";
         resultadoDiv.style.color = "red";
@@ -168,3 +172,4 @@
   </script>
 </body>
 </html>
+
