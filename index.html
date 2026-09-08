@@ -78,9 +78,6 @@
     <input type="text" id="miNombre" placeholder="Tu nombre" />
     <button onclick="sortear()">Sortear</button>
     <div id="resultado"></div>
-    <p>Día: Domingo 27 de Septiembre de 2026</p>
-    <p>Hora: </p>
-    <p>Lugar: </p>
   </div>
 
   <footer>💡 Sistema sincronizado con Firebase</footer>
@@ -169,6 +166,7 @@
       await set(ref(db, `asignaciones/${miNombre}`), elegido);
 
       resultadoDiv.innerHTML = `🎉 Te ha tocado: <strong>${elegido}</strong>`;
+      resultadoDiv.innerHTML = `<p>Día: Domingo 27 de Septiembre de 2026</p>`;
       resultadoDiv.style.color = "#16a34a";
     }
 
